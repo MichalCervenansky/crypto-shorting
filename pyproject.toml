@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "crypto-shorting"
+version = "0.1.0"
+description = "Backtesting and optimization for a crypto shorting strategy using backtrader."
+authors = ["Michal Cervenansky"]
+readme = "Readme.MD"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+backtrader = "^1.9.76.123"
+numpy = "^1.26.4"
+matplotlib = "*" # Add matplotlib
+
+[tool.poetry.scripts]
+run-single = "shorting_run:main"
+run-opti = "crypto_shorting_opti:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
